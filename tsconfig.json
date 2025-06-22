@@ -2,7 +2,7 @@
 	"$schema": "https://json.schemastore.org/tsconfig.json",
 	"compilerOptions": {
 		// Environment setup & latest features
-		"lib": [],
+		"lib": ["ESNext"],
         // es2018: named capturing group
 		"target": "es2018",
 		"module": "es2015",
