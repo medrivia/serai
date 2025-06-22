@@ -73,7 +73,7 @@ assert(S.x).toEqual(
 )
 ```
 
->   [!INFO]
+>   [!NOTE]
 >   The lines are separated for easier control/manipulation. They can be joined back when it’s time to render on the web page.
 
 ## 🔔 Release Info
