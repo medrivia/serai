@@ -21,7 +21,7 @@
 </p>
 
 >   [!CAUTION]
->   This project is still a **proof of concept** and not yet intended for production or commerical use.
+>   This project is still a **proof of concept** and not yet intended for production.
 
 ## 🌠 Motivation
 
@@ -50,10 +50,31 @@ This is how you do it. Let’s go to [the advanced section](advanced).
 # Advanced
 <!-- id=advanced -->
 
-Before reading this section, we hope you already mastered [Get Started](get-started) page.
+Before reading this, you should finish [_Get Started_](get-started).
 ```
 
 As you can see, there can be multiple top-level headings in one file with ID embedded in each comment.
+
+When parsed by the main `Serai` class, the result will be:
+
+```ts
+const S = new Serai(md)
+assert(S.x).toEqual(
+    {
+        "get-started": [ "# Get Started", "<!-- id=get-started -->",
+            "", "This is how you do it. Let’s go to [the advanced section](advanced).",
+            "", "# Advanced"
+        ],
+        advanced: [ "# Advanced", "<!-- id=advanced -->",
+            "", "Before reading this, you should finish [_Get Started_](get-started).",
+            ""
+        ],
+    }
+)
+```
+
+>   [!INFO]
+>   The lines are separated for easier control/manipulation. They can be joined back when it’s time to render on the web page.
 
 ## 🔔 Release Info
 
