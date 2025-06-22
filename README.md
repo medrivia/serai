@@ -5,12 +5,12 @@
 </p>
 
 <p align="center">
-    <!-- <a href="https://github.com/medrivia/serai/actions/workflows/release.yml"> -->
-    <!--     <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/medrivia/serai/release.yml?event=release"/> -->
-    <!-- </a> -->
-    <!-- <a href="https://www.npmjs.com/package/serai"> -->
-    <!--     <img alt="Visit the NPM page" src="https://img.shields.io/npm/v/serai"/> -->
-    <!-- </a> -->
+    <a href="https://github.com/medrivia/serai/actions/workflows/release.yml">
+        <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/medrivia/serai/release.yml?event=release"/>
+    </a>
+    <a href="https://www.npmjs.com/package/serai">
+        <img alt="Visit the NPM page" src="https://img.shields.io/npm/v/serai"/>
+    </a>
     <a href="https://github.com/medrivia/serai/blob/master/LICENSE">
         <img alt="GitHub License" src="https://img.shields.io/github/license/medrivia/serai">
     </a>
