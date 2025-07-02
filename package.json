@@ -1,11 +1,14 @@
 {
     "name": "serai",
-    "version": "257.1.0",
+    "version": "260.0.0-alpha.0",
     "description": "📖 (WIP) Markdown-powered framework that focuses on freedom and interactivity.",
     "keywords": ["docs", "documentation", "framework", "knowledgebase", "markdown", "wiki"],
     "homepage": "https://github.com/medrivia/serai",
     "bin": {
         "serai": "bin/serai.ts"
+    },
+    "man": {
+        "serai": "man/serai.1"
     },
     "bugs": {
         "url": "https://github.com/medrivia/serai/issues"
@@ -23,7 +26,8 @@
     },
     "files": ["dist"],
     "scripts": {
-        "b": "tsc --build tsconfig.build.json && swc --strip-leading-paths ./src/v*/ -d ./dist/"
+        "b": "tsc --build tsconfig.build.json && swc --strip-leading-paths ./src/v*/ -d ./dist/",
+        "prepublishOnly": "./man-generate.ts"
     },
     "publishConfig": {
         "main": "./dist/v257/index.js",
@@ -45,5 +49,8 @@
         "es-toolkit": "^1.39.4",
         "redom": "^4.3.0",
         "snarkdown": "^2.0.0"
+    },
+    "dependencies": {
+        "remark-man": "^9.0.0"
     }
 }
