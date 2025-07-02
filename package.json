@@ -1,33 +1,38 @@
 {
     "name": "serai",
     "version": "260.0.0-alpha.0",
-    "description": "📖 (WIP) Markdown-powered framework that focuses on freedom and interactivity.",
-    "keywords": ["docs", "documentation", "framework", "knowledgebase", "markdown", "wiki"],
-    "homepage": "https://github.com/medrivia/serai",
-    "bin": {
-        "serai": "bin/serai.ts"
-    },
-    "man": {
-        "serai": "man/serai.1"
-    },
-    "bugs": {
-        "url": "https://github.com/medrivia/serai/issues"
-    },
+    "author": "Umar Alfarouk <medrivia@gmail.com> (https://alfarouk.id)",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/medrivia/serai.git"
     },
-    "license": "GPL-3.0",
-    "author": "Umar Alfarouk <medrivia@gmail.com> (https://alfarouk.id)",
-    "type": "module",
+    "devDependencies": {
+        "@swc/cli": "^0.7.7",
+        "@swc/plugin-transform-imports": "^8.0.3",
+        "es-toolkit": "^1.39.4",
+        "redom": "^4.3.0",
+        "remark-man": "^9.0.0",
+        "remark-parse": "^11.0.0",
+        "snarkdown": "^2.0.0",
+        "unified": "^11.0.5"
+    },
     "exports": {
         ".": "./src/v257/index.ts",
         "./*": "./src/*/index.ts"
     },
+    "bin": {
+        "serai": "bin/serai.ts"
+    },
+    "bugs": {
+        "url": "https://github.com/medrivia/serai/issues"
+    },
+    "description": "📖 (WIP) Markdown-powered framework that focuses on freedom and interactivity.",
     "files": ["dist"],
-    "scripts": {
-        "b": "tsc --build tsconfig.build.json && swc --strip-leading-paths ./src/v*/ -d ./dist/",
-        "prepublishOnly": "./man-generate.ts"
+    "homepage": "https://github.com/medrivia/serai",
+    "keywords": ["docs", "documentation", "framework", "knowledgebase", "markdown", "wiki"],
+    "license": "GPL-3.0",
+    "man": {
+        "serai": "man/serai.1"
     },
     "publishConfig": {
         "main": "./dist/v257/index.js",
@@ -43,14 +48,9 @@
             }
         }
     },
-    "devDependencies": {
-        "@swc/cli": "^0.7.7",
-        "@swc/plugin-transform-imports": "^8.0.3",
-        "es-toolkit": "^1.39.4",
-        "redom": "^4.3.0",
-        "snarkdown": "^2.0.0"
+    "scripts": {
+        "b": "tsc --build tsconfig.build.json && swc --strip-leading-paths ./src/v*/ -d ./dist/",
+        "prepublishOnly": "./man-generate.ts"
     },
-    "dependencies": {
-        "remark-man": "^9.0.0"
-    }
+    "type": "module"
 }
