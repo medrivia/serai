@@ -27,7 +27,7 @@
         "url": "https://github.com/medrivia/serai/issues"
     },
     "description": "📖 (WIP) Markdown-powered framework that focuses on freedom and interactivity.",
-    "files": ["dist"],
+    "files": ["dist", "man"],
     "homepage": "https://github.com/medrivia/serai",
     "keywords": ["docs", "documentation", "framework", "knowledgebase", "markdown", "wiki"],
     "license": "GPL-3.0",
