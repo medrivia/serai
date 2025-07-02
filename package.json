@@ -1,6 +1,6 @@
 {
     "name": "serai",
-    "version": "260.0.0-alpha.4",
+    "version": "260.0.0-alpha.5",
     "author": "Umar Alfarouk <medrivia@gmail.com> (https://alfarouk.id)",
     "repository": {
         "type": "git",
@@ -31,8 +31,9 @@
     "homepage": "https://github.com/medrivia/serai",
     "keywords": ["docs", "documentation", "framework", "knowledgebase", "markdown", "wiki"],
     "license": "GPL-3.0",
-    "man": ["man/serai.1"],
+    "man": ["./man/man1/serai.1"],
     "directories": {
+        "bin": "./bin",
         "man": "./man"
     },
     "publishConfig": {
@@ -50,7 +51,7 @@
         }
     },
     "scripts": {
-        "b": "tsc --build tsconfig.build.json && swc --strip-leading-paths ./src/v*/ -d ./dist/",
+        "b": "./man-generate.tstsc --build tsconfig.build.json && swc --strip-leading-paths ./src/v*/ -d ./dist/",
         "prepublishOnly": "./man-generate.ts"
     },
     "type": "module"

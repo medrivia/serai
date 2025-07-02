@@ -6,7 +6,7 @@ import {unified} from 'unified'
 import { version } from './package.json'
 const MAN_DIR = './man'
 
-for (const path of new Glob(`${MAN_DIR}/*.md`).scanSync('.')) {
+for (const path of new Glob(`${MAN_DIR}/**/*.md`).scanSync('.')) {
     const file = await unified()
       .use(remarkParse)
       .use(remarkMan, {version, manual: "Write with more freedom"})
