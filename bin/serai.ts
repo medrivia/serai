@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 if (typeof Bun !== "undefined") {
     throw new Error("This app needs to be executed with Bun.")
 }
