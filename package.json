@@ -51,7 +51,7 @@
         }
     },
     "scripts": {
-        "b": "./man-generate.tstsc --build tsconfig.build.json && swc --strip-leading-paths ./src/v*/ -d ./dist/",
+        "b": "tsc --build tsconfig.build.json && swc --strip-leading-paths ./src/v*/ -d ./dist/",
         "prepublishOnly": "./man-generate.ts"
     },
     "type": "module"
