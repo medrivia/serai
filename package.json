@@ -21,7 +21,7 @@
         "./*": "./src/*/index.ts"
     },
     "bin": {
-        "serai": "bin/serai.ts"
+        "serai": "./bin/serai.ts"
     },
     "bugs": {
         "url": "https://github.com/medrivia/serai/issues"
