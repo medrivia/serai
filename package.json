@@ -1,9 +1,12 @@
 {
 	"name": "serai",
-	"version": "257.0.0",
+	"version": "257.1.0",
 	"description": "📖 (WIP) Markdown-powered framework that focuses on freedom and interactivity.",
 	"keywords": ["docs", "documentation", "framework", "knowledgebase", "markdown", "wiki"],
 	"homepage": "https://github.com/medrivia/serai",
+    "bin": {
+        "serai": "bin/serai.js"
+    },
 	"bugs": {
 		"url": "https://github.com/medrivia/serai/issues"
 	},
@@ -20,7 +23,7 @@
 	},
 	"files": ["dist"],
 	"scripts": {
-		"b": "tsc && swc --strip-leading-paths ./src/v*/ -d ./dist/"
+		"b": "tsc --build tsconfig.build.json && swc --strip-leading-paths ./src/v*/ -d ./dist/"
 	},
     "publishConfig": {
         "main": "./dist/v257/index.js",
