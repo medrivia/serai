@@ -1,0 +1,15 @@
+{
+  "name": "@serai/core",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@mdrv/m": "^257.4.1",
+    "cbor-x": "^1.6.0"
+  }
+}

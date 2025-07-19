@@ -1,0 +1,9 @@
+{
+  "name": "@serai/preview",
+  "module": "index.ts",
+  "type": "module",
+  "peerDependencies": {
+    "@serai/cli": "workspace:^",
+    "@serai/core": "workspace:^"
+  }
+}
