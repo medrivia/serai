@@ -5,7 +5,6 @@
 		"bun.lock",
 		"dprint.json",
 		"tsdown.config.ts",
-		"src/*.ts",
 		"res/",
 		".github/"
 	]
