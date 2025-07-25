@@ -52,6 +52,12 @@ jobs:
             'del(.publishConfig)' \
             package.json > package.json~
           mv package.json~ package.json
+      - name: "Convert symlinks (one-level deep) in root directory"
+        working-directory: packages/${{ inputs.pkg }}
+        run: |
+          for symlink in $(find . -type l); do
+            cp -f "$(realpath "$symlink")" "$symlink"
+          done
       - name: Publish to JSR
         working-directory: packages/${{ inputs.pkg }}
         run: |
