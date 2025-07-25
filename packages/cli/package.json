@@ -16,10 +16,7 @@
 	"main": "bin/serai.ts",
 	"types": "bin/serai.ts",
 	"exports": {
-		".": {
-			"default": "./bin/serai.ts",
-			"types": "./bin/serai.ts"
-		}
+		".": "./bin/serai.ts"
 	},
 	"scripts": {
 		"b": " "
