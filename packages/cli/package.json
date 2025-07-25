@@ -13,6 +13,14 @@
 	"bin": {
 		"serai": "./bin/serai.ts"
 	},
+	"main": "bin/serai.ts",
+	"types": "bin/serai.ts",
+	"exports": {
+		".": {
+			"default": "./bin/serai.ts",
+			"types": "./bin/serai.ts"
+		}
+	},
 	"scripts": {
 		"b": " "
 	},
