@@ -44,9 +44,8 @@ jobs:
         with:
           bun-version: latest
       - name: Move to specified package
-        run: cd packages/$inputs.pkg
+        run: cd packages/${{ inputs.pkg }}
       - run: bun i # install
-      - run: bun g # generate
       - name: "Remove publishConfig"
         run: |
           jq \
@@ -78,7 +77,7 @@ jobs:
           registry-url: "https://registry.npmjs.org/"
           scope: "@serai"
       - name: Move to specified package
-        run: cd packages/$inputs.pkg
+        run: cd packages/${{ inputs.pkg }}
       - run: bun i # install
       - run: bun b # build
       - name: "Use data from publishConfig"
