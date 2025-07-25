@@ -3,7 +3,7 @@
 	"compilerOptions": {
 		// Environment setup & latest features
 		"lib": ["ESNext"],
-        // es2018: named capturing group
+		// es2018: named capturing group
 		"target": "es2018",
 		"module": "es2015",
 		"moduleDetection": "force",
@@ -28,7 +28,8 @@
 		// Some stricter flags (disabled by default)
 		"noUnusedLocals": false,
 		"noUnusedParameters": false,
-		"noPropertyAccessFromIndexSignature": false,
+		"noPropertyAccessFromIndexSignature": false
 	},
-	"include": ["src/v*/**/*.ts"]
+	"include": ["src/v*/**/*.ts"],
+	"exclude": ["**/*.test.ts", "**/test.ts"]
 }

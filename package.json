@@ -1,7 +1,6 @@
 {
-  "name": "@serai/workspace",
+	"name": "@serai/workspace",
 	"private": true,
-  "workspaces": ["packages/*"],
-	"scripts": {
-	}
+	"workspaces": ["packages/[a-z]*"],
+	"scripts": {}
 }

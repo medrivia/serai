@@ -5,9 +5,9 @@
  * @param opts - Options
  */
 export class Serai {
-    /**
-     * @summary Digestible notes with specified IDs as keys
-     */
+	/**
+	 * @summary Digestible notes with specified IDs as keys
+	 */
 	x: Record<string, string[]> = {}
 	constructor(md: Array<string> | string, opts = {}) {
 		const mdArray = Array.isArray(md) ? md : [md]
@@ -20,7 +20,7 @@ export class Serai {
 					currentId = id.groups.id
 					this.x[currentId] = prev ? [prev] : []
 				}
-                const cur = currentId // i: TS requires const
+				const cur = currentId // i: TS requires const
 				if (cur && Array.isArray(this.x[cur])) {
 					this.x[cur].push(line)
 				}

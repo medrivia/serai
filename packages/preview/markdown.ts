@@ -1,2 +1,2 @@
-import {frontmatterMarkdownPlugin} from './bun-plugin-markdown/plugin.ts'
+import { frontmatterMarkdownPlugin } from './bun-plugin-markdown/plugin.ts'
 export default frontmatterMarkdownPlugin()

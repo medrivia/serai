@@ -1,0 +1,10 @@
+{
+	"name": "serai",
+	"version": "0.0.1",
+	"description": "Alias for @serai/core + @serai/cli",
+	"type": "module",
+	"dependencies": {
+		"@swc/core": "latest",
+		"@swc/cli": "latest"
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"name": "@serai/cli",
+	"include": ["LICENSE", "README.md", "bin/*.ts"],
+	"exclude": [
+		"bun.lock",
+		"dprint.json",
+		"tsdown.config.ts",
+		"src/*.ts",
+		"res/",
+		".github/"
+	]
+}

@@ -1,2 +1,2 @@
 [serve.static]
-plugins = [ "bunmd" ]
+plugins = ["bunmd"]

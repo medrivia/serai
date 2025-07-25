@@ -1,26 +1,22 @@
 # serai(1) -- Write with more freedom
 
-SYNOPSIS
-========
+# SYNOPSIS
 
 `serai [-h]`
 
-DESCRIPTION
-===========
+# DESCRIPTION
 
 serai is a document helper/enhancement.
 
 More info coming soon...
 
-OPTIONS
-=======
+# OPTIONS
 
 `-h, --help`
 
-:   Show the help message and exit
+: Show the help message and exit
 
-BUGS
-====
+# BUGS
 
 Bugs can be reported and filed at https://github.com/medrivia/serai/issues
 

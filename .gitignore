@@ -20,3 +20,5 @@ dist
 
 /man/*/*
 !/man/**/*.md
+
+tmp/

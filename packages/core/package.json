@@ -1,15 +1,39 @@
 {
-  "name": "@serai/core",
-  "module": "index.ts",
-  "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.8.3"
-  },
-  "dependencies": {
-    "@mdrv/m": "^257.4.1",
-    "cbor-x": "^1.6.0"
-  }
+	"name": "@serai/core",
+	"version": "0.0.1",
+	"description": "📖 (WIP) Next-gen writing/documentation framework",
+	"author": "Umar Alfarouk <medrivia@gmail.com> (https://alfarouk.id)",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/medrivia/serai.git"
+	},
+	"bugs": {
+		"url": "https://github.com/medrivia/serai/issues"
+	},
+	"type": "module",
+	"main": "src/index.ts",
+	"scripts": {
+		"b": "tsdown",
+		"f": "dprint fmt",
+		"fc": "dprint check"
+	},
+	"files": ["dist"],
+	"publishConfig": {
+		"main": "./dist/index.js",
+		"types": "./dist/index.d.ts",
+		"exports": {
+			".": {
+				"default": "./dist/index.js",
+				"types": "./dist/index.d.ts"
+			}
+		}
+	},
+	"devDependencies": {
+		"@types/bun": "latest",
+		"tsdown": "^0.13.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5.8.3"
+	},
+	"dependencies": {}
 }

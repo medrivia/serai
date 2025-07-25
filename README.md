@@ -20,12 +20,12 @@
     <b><i>(WIP) Markdown-powered framework that focuses on freedom and interactivity.</i></b>
 </p>
 
->   [!CAUTION]
->   This project is still a **proof of concept** and not yet intended for production.
+> [!CAUTION]
+> This project is still a **proof of concept** and not yet intended for production.
 
 ## 🌠 Motivation
 
->   Many documentation frameworks centered around filename convention and/or directory structure. For most people, this is preferrable or logical. However, there is also a case where we have our own naming convention or desire the convenience of having comprehensive knowledgebase with as few files as possible.
+> Many documentation frameworks centered around filename convention and/or directory structure. For most people, this is preferrable or logical. However, there is also a case where we have our own naming convention or desire the convenience of having comprehensive knowledgebase with as few files as possible.
 
 ## 🎁 Architecture
 
@@ -43,11 +43,13 @@ An example of a Markdown file:
 
 ```md
 # Get Started
+
 <!-- id=get-started -->
 
 This is how you do it. Let’s go to [the advanced section](advanced).
 
 # Advanced
+
 <!-- id=advanced -->
 
 Before reading this, you should finish [_Get Started_](get-started).
@@ -59,31 +61,36 @@ When parsed by the main `Serai` class, the result will be:
 
 ```ts
 const S = new Serai(md)
-assert(S.x).toEqual(
-    {
-        "get-started": [ "# Get Started", "<!-- id=get-started -->",
-            "", "This is how you do it. Let’s go to [the advanced section](advanced).",
-            "", "# Advanced"
-        ],
-        advanced: [ "# Advanced", "<!-- id=advanced -->",
-            "", "Before reading this, you should finish [_Get Started_](get-started).",
-            ""
-        ],
-    }
-)
+assert(S.x).toEqual({
+	'get-started': [
+		'# Get Started',
+		'<!-- id=get-started -->',
+		'',
+		'This is how you do it. Let’s go to [the advanced section](advanced).',
+		'',
+		'# Advanced',
+	],
+	advanced: [
+		'# Advanced',
+		'<!-- id=advanced -->',
+		'',
+		'Before reading this, you should finish [_Get Started_](get-started).',
+		'',
+	],
+})
 ```
 
->   [!NOTE]
->   The lines are separated for easier control/manipulation. They can be joined back when it’s time to render on the web page.
+> [!NOTE]
+> The lines are separated for easier control/manipulation. They can be joined back when it’s time to render on the web page.
 
 ## 🔔 Release Info
 
 This package implements **Gregorian YYM-based** semver notation.
 
--   📅 `v257.x.x`: Released around/on July 2025. **(current)**
--   🚀 `v260.x.x`: Released from October to December 2025.
+- 📅 `v257.x.x`: Released around/on July 2025. **(current)**
+- 🚀 `v260.x.x`: Released from October to December 2025.
 
-For every major release, the preceding version will need to be imported with subpath: 
+For every major release, the preceding version will need to be imported with subpath:
 
 ```ts
 /* Example: v260.x.x */
