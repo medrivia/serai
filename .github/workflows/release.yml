@@ -43,16 +43,17 @@ jobs:
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: latest
-      - name: Move to specified package
-        run: cd packages/${{ inputs.pkg }}
       - run: bun i # install
+        working-directory: packages/${{ inputs.pkg }}
       - name: "Remove publishConfig"
+        working-directory: packages/${{ inputs.pkg }}
         run: |
           jq \
             'del(.publishConfig)' \
             package.json > package.json~
           mv package.json~ package.json
       - name: Publish to JSR
+        working-directory: packages/${{ inputs.pkg }}
         run: |
           jq \
             -s '.[0] * (.[1] | {version,license,exports})' \
@@ -76,11 +77,12 @@ jobs:
           bun-version: latest
           registry-url: "https://registry.npmjs.org/"
           scope: "@serai"
-      - name: Move to specified package
-        run: cd packages/${{ inputs.pkg }}
       - run: bun i # install
+        working-directory: packages/${{ inputs.pkg }}
       - run: bun b # build
+        working-directory: packages/${{ inputs.pkg }}
       - name: "Use data from publishConfig"
+        working-directory: packages/${{ inputs.pkg }}
         run: |
           jq \
             'reduce .publishConfig as $in (.; . + $in) | del(.publishConfig)' \
@@ -92,6 +94,7 @@ jobs:
           registry-url: "https://registry.npmjs.org/"
           scope: "@serai"
       - name: "Publish to NPM"
+        working-directory: packages/${{ inputs.pkg }}
         run: npm publish --provenance --access public --tag $TAG
         env:
           NPM_CONFIG_TOKEN: ${{secrets.NPM_TOKEN}}
