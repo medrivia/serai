@@ -4,7 +4,7 @@
 	"description": "Alias for @serai/core + @serai/cli",
 	"type": "module",
 	"dependencies": {
-		"@swc/core": "latest",
-		"@swc/cli": "latest"
+		"@serai/core": "latest",
+		"@serai/cli": "latest"
 	}
 }
