@@ -1,6 +1,6 @@
 {
 	"name": "@serai/cli",
-	"version": "0.0.3-beta.0",
+	"version": "0.0.3-beta.1",
 	"description": "📖 (WIP) Next-gen writing/documentation framework",
 	"author": "Umar Alfarouk <medrivia@gmail.com> (https://alfarouk.id)",
 	"repository": {
@@ -11,19 +11,24 @@
 		"url": "https://github.com/medrivia/serai/issues"
 	},
 	"type": "module",
-	"files": ["bin/*.{ts,js}", "utils/*.{ts,js}"],
+	"files": ["bin/*.{ts,js}", "utils/*.{ts,js}", "man/**/*.[1-9]"],
 	"bin": "./bin/serai.ts",
+	"man": ["./man/man1/serai.1"],
 	"main": "./bin/serai.ts",
 	"types": "./bin/serai.ts",
 	"exports": {
 		".": "./bin/serai.ts"
 	},
 	"scripts": {
+		"b": "./man/generate.ts",
 		"build-exe": "bun build --compile --minify --sourcemap --bytecode ./bin/serai.ts --outfile ./bin/serai"
 	},
 	"devDependencies": {
 		"@types/bun": "latest",
-		"tsdown": "^0.13.0"
+		"remark-man": "^9.0.0",
+		"remark-parse": "^11.0.0",
+		"tsdown": "^0.13.0",
+		"unified": "^11.0.5"
 	},
 	"peerDependencies": {
 		"@serai/core": "workspace:^",
