@@ -29,6 +29,11 @@ on:
           - latest
           - next
 
+run-name: >
+  ${{ github.event_name == 'workflow_dispatch'
+  && format('Publish {0} on {1}{2}', inputs.pkg, inputs.jsr && 'JSR ' || '', inputs.npm && 'NPM' || '')
+  || github.workflow }}
+
 jobs:
   jsr-release:
     if: ${{ inputs.jsr }}
@@ -49,21 +54,21 @@ jobs:
         working-directory: packages/${{ inputs.pkg }}
         run: |
           jq \
-            'del(.publishConfig)' \
-            package.json > package.json~
+          'del(.publishConfig)' \
+          package.json > package.json~
           mv package.json~ package.json
       - name: "Convert symlinks (one-level deep) in root directory"
         working-directory: packages/${{ inputs.pkg }}
         run: |
           for symlink in $(find . -maxdepth 1 -type l); do
-            cp -f --remove-destination "$(realpath "$symlink")" "$symlink"
+          cp -f --remove-destination "$(realpath "$symlink")" "$symlink"
           done
       - name: Publish to JSR
         working-directory: packages/${{ inputs.pkg }}
         run: |
           jq \
-            -s '.[0] * (.[1] | {version,license,exports})' \
-            jsr.json package.json > jsr.json~
+          -s '.[0] * (.[1] | {version,license,exports})' \
+          jsr.json package.json > jsr.json~
           mv jsr.json~ jsr.json
           bunx jsr publish --allow-dirty
   npm-release:
@@ -91,14 +96,14 @@ jobs:
         working-directory: packages/${{ inputs.pkg }}
         run: |
           jq \
-            'reduce .publishConfig as $in (.; . + $in) | del(.publishConfig)' \
-            package.json > package.json~
+          'reduce .publishConfig as $in (.; . + $in) | del(.publishConfig)' \
+          package.json > package.json~
           mv package.json~ package.json
       - name: "Convert symlinks (one-level deep) in root directory"
         working-directory: packages/${{ inputs.pkg }}
         run: |
           for symlink in $(find . -maxdepth 1 -type l); do
-            cp -f --remove-destination "$(realpath "$symlink")" "$symlink"
+          cp -f --remove-destination "$(realpath "$symlink")" "$symlink"
           done
       - uses: actions/setup-node@v4
         with:
