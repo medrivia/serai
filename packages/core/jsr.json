@@ -1,11 +1,5 @@
 {
 	"name": "@serai/core",
 	"include": ["LICENSE", "README.md", "src/*.ts"],
-	"exclude": [
-		"bun.lock",
-		"dprint.json",
-		"tsdown.config.ts",
-		"res/",
-		".github/"
-	]
+	"exclude": ["bun.lock", "dprint.json", "tsdown.config.ts", "res/", ".github/"]
 }

@@ -2,7 +2,17 @@
 	"name": "serai",
 	"version": "0.0.1",
 	"description": "Alias for @serai/core + @serai/cli",
+	"author": "Umar Alfarouk <medrivia@gmail.com> (https://alfarouk.id)",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/medrivia/serai.git"
+	},
+	"bugs": {
+		"url": "https://github.com/medrivia/serai/issues"
+	},
 	"type": "module",
+	"main": "./index.ts",
+	"types": "./index.ts",
 	"dependencies": {
 		"@serai/core": "latest",
 		"@serai/cli": "latest"

@@ -94,6 +94,12 @@ jobs:
             'reduce .publishConfig as $in (.; . + $in) | del(.publishConfig)' \
             package.json > package.json~
           mv package.json~ package.json
+      - name: "Convert symlinks (one-level deep) in root directory"
+        working-directory: packages/${{ inputs.pkg }}
+        run: |
+          for symlink in $(find . -maxdepth 1 -type l); do
+            cp -f --remove-destination "$(realpath "$symlink")" "$symlink"
+          done
       - uses: actions/setup-node@v4
         with:
           node-version: latest
