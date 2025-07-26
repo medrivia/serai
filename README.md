@@ -5,6 +5,13 @@
 </p>
 
 <p align="center">
+    <a href="https://bun.sh/">
+        <img alt="Bun-powered" src="https://img.shields.io/badge/Powered_by_Bun-black?logo=bun&logoColor=fbf0df"/>
+    </a>
+    <a href="https://jsr.io/@serai">
+        <img alt="Visit the JSR page" src="https://jsr.io/badges/@serai" />
+    </a>
+    <br/>
     <a href="https://github.com/medrivia/serai/actions/workflows/release.yml">
         <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/medrivia/serai/release.yml?event=release"/>
     </a>
