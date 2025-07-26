@@ -1,6 +1,6 @@
 {
 	"name": "@serai/core",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "📖 (WIP) Next-gen writing/documentation framework",
 	"author": "Umar Alfarouk <medrivia@gmail.com> (https://alfarouk.id)",
 	"repository": {
