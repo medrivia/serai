@@ -18,6 +18,9 @@
 	"exports": {
 		".": "./bin/serai.ts"
 	},
+	"scripts": {
+		"build-exe": "bun build --compile --minify --sourcemap --bytecode ./bin/serai.ts --outfile ./bin/serai"
+	},
 	"devDependencies": {
 		"@types/bun": "latest",
 		"tsdown": "^0.13.0"
