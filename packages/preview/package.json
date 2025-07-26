@@ -4,15 +4,11 @@
 	"type": "module",
 	"peerDependencies": {
 		"@serai/cli": "workspace:^",
-		"@serai/core": "workspace:^",
-		"bunmd": "link:bunmd"
+		"@serai/core": "workspace:^"
 	},
 	"scripts": {
 		"d": "bun -b ./index.ts",
 		"s": "bun -b ./index.ts",
 		"w": "bun -b --hot ./index.ts"
-	},
-	"devDependencies": {
-		"bun-plugin-markdown": "git+https://github.com/stacksjs/bun-plugin-markdown"
 	}
 }
