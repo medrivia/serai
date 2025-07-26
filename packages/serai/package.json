@@ -1,6 +1,6 @@
 {
 	"name": "serai",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "Alias for @serai/core + @serai/cli",
 	"author": "Umar Alfarouk <medrivia@gmail.com> (https://alfarouk.id)",
 	"repository": {
@@ -13,6 +13,9 @@
 	"type": "module",
 	"main": "./index.ts",
 	"types": "./index.ts",
+	"exports": {
+		".": "./index.ts"
+	},
 	"dependencies": {
 		"@serai/cli": "workspace:^",
 		"@serai/core": "workspace:^"

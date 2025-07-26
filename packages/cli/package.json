@@ -1,6 +1,6 @@
 {
 	"name": "@serai/cli",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "📖 (WIP) Next-gen writing/documentation framework",
 	"author": "Umar Alfarouk <medrivia@gmail.com> (https://alfarouk.id)",
 	"repository": {
@@ -10,18 +10,13 @@
 	"bugs": {
 		"url": "https://github.com/medrivia/serai/issues"
 	},
-	"bin": {
-		"serai": "./bin/serai.ts"
-	},
-	"main": "bin/serai.ts",
-	"types": "bin/serai.ts",
+	"type": "module",
+	"bin": "./bin/serai.ts",
+	"main": "./bin/serai.ts",
+	"types": "./bin/serai.ts",
 	"exports": {
 		".": "./bin/serai.ts"
 	},
-	"scripts": {
-		"b": " "
-	},
-	"type": "module",
 	"devDependencies": {
 		"@types/bun": "latest",
 		"tsdown": "^0.13.0"

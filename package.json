@@ -2,5 +2,8 @@
 	"name": "@serai/workspace",
 	"private": true,
 	"workspaces": ["packages/[a-z]*"],
-	"scripts": {}
+	"scripts": {
+		"F": "dprint fmt",
+		"f": "dprint check"
+	}
 }
