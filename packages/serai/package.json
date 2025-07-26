@@ -11,6 +11,7 @@
 		"url": "https://github.com/medrivia/serai/issues"
 	},
 	"type": "module",
+	"files": ["./*.{ts,js}"],
 	"main": "./index.ts",
 	"types": "./index.ts",
 	"exports": {
