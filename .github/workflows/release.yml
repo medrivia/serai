@@ -85,7 +85,7 @@ jobs:
           scope: "@serai"
       - run: bun i # install
         working-directory: packages/${{ inputs.pkg }}
-      - run: bun b # build
+      - run: bun --if-present b # build
         working-directory: packages/${{ inputs.pkg }}
       - name: "Use data from publishConfig"
         working-directory: packages/${{ inputs.pkg }}
