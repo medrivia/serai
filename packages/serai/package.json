@@ -1,8 +1,12 @@
 {
 	"name": "serai",
 	"version": "0.0.2",
-	"description": "Alias for @serai/core + @serai/cli",
+	"license": "GPL-3.0",
+	"type": "module",
+	"keywords": [],
+	"description": "📖 (WIP) Next-gen writing/documentation framework",
 	"author": "Umar Alfarouk <medrivia@gmail.com> (https://alfarouk.id)",
+	"homepage": "https://github.com/medrivia/serai",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/medrivia/serai.git"
@@ -10,7 +14,6 @@
 	"bugs": {
 		"url": "https://github.com/medrivia/serai/issues"
 	},
-	"type": "module",
 	"files": ["./*.{ts,js}"],
 	"main": "./index.ts",
 	"types": "./index.ts",
